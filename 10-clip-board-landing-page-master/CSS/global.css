@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Bai Jamjuree', 'sans-serif';
+    line-height: 1.5;
+}
+
+::after, ::before {
+    box-sizing: inherit;
+}
+
+:root {
+    /* ## Colors */
+    /* ### Primary */
+    --Strong-Cyan: hsl(171, 66%, 44%);
+    --Light-Blue: hsl(233, 100%, 69%);
+    /* ### Neutral */
+    --Dark-Grayish-Blue: hsl(210, 3%, 54%);
+    --Grayish-Blue: hsl(201, 11%, 66%);
+}
