@@ -517,5 +517,10 @@ i {
         width: auto;
     }
 
+    .attribution {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+    }
 
 }
