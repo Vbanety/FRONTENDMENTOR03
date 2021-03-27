@@ -278,38 +278,79 @@ i {
     flex-direction: row;
     align-self: flex-start;
     padding: 0;
-    width: auto;
+    width: 150px;
 }
 
-.footer-flex li img:hover {
-    cursor: pointer;
-}
-
-/* .social-media .icons1, .icons2, .icons3 {
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: center;
+.social-media .icons1, .icons2, .icons3 {
     width: 25px;
     height: 25px;
     margin: 0 10px;
-} */
-
-/* .icons1:hover {
-    background-image: url('/images/icon-facebook.svg');
+    display: inline-block;
+    overflow: hidden;
+    position: relative !important;
 }
 
-.icons2:hover {
-    background-image: url('/images/icon-twitter.svg');
+.social-media .icons1 img {
+    width: 100%;
+    transition: all linear .3s;
 }
 
-.icons3:hover {
-    background-image: url('/images/icon-instagram.svg');
-} */
-
-/*TESTE*/
-
-.footer-flex div img:hover {
+.social-media .icons1 img.hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
     opacity: 0;
+}
+
+.social-media .icons1:hover img {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.social-media .icons1:hover img.hover-img {
+    opacity: 1;
+}
+
+.social-media .icons2 img {
+    width: 100%;
+    transition: all linear .3s;
+}
+
+.social-media .icons2 img.hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.social-media .icons2:hover img {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.social-media .icons2:hover img.hover-img {
+    opacity: 1;
+}
+
+.social-media .icons3 img {
+    width: 100%;
+    transition: all linear .3s;
+}
+
+.social-media .icons3 img.hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.social-media .icons3:hover img {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.social-media .icons3:hover img.hover-img {
+    opacity: 1;
 }
 
 @media(max-width: 1220px) {
