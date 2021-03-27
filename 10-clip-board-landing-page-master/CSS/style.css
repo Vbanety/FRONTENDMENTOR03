@@ -254,6 +254,16 @@ footer ul li {
     margin: 0;
 }
 
+footer ul li a {
+    color: inherit;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: var(--Strong-Cyan);
+    cursor: pointer;
+}
+
 .footer-flex {
     display: flex;
     flex-direction: row;
@@ -272,6 +282,8 @@ i {
     display: flex;
     align-self: flex-start;
 }
+
+
 
 .social-media {
     display: flex;
