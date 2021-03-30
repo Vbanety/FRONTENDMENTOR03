@@ -6,6 +6,7 @@ body {
     flex-direction: column;
     margin: 5% auto;
 }
+
 /* HEADER */
 
 header, main, footer {
@@ -29,11 +30,12 @@ header ul {
 header ul li {
     padding: 0 20px;
     list-style-type: none;
+    font-size: 20px;
 }
 
 header ul li a:hover {
     cursor: pointer;
-    text-decoration:underline;
+    text-decoration: underline;
 }
 
 header ul li a {
@@ -51,7 +53,6 @@ header ul li a {
 
 .files img {
     margin-top: 50px;
-    
 }
 
 .files .discreption-file {
@@ -83,7 +84,7 @@ header ul li a {
     font-weight: 700;
 }
 
-.files button:hover {
+button:hover {
     background-image: linear-gradient(to top, var(--Cyan), var(--Cyan));
     opacity: .9;
     cursor: pointer;
@@ -100,16 +101,12 @@ header ul li a {
 .blocks .box-file {
     width: 400px;
     height: 300px;
-    
     text-align: center;
     align-items: center;
     vertical-align: center;
-    /* display: flex;    
-    justify-content: space-around;
-    flex-direction: column; */
 }
 
-.blocks .box-file img {   
+.blocks .box-file img {
     height: 75px;
 }
 
@@ -153,7 +150,6 @@ header ul li a {
 .productive div span picture {
     display: flex;
     margin: auto;
-
 }
 
 .productive div span picture:hover {
@@ -168,8 +164,8 @@ header ul li a {
 
 .profiles {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 3fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 3fr));
+    gap: 25px;
     margin-bottom: 250px;
     margin-left: auto;
     margin-right: auto;
@@ -180,7 +176,6 @@ header ul li a {
     width: 380px;
     padding: 40px 30px 30px 30px;
     border-radius: 10px;
-    
 }
 
 .profiles .quotes {
@@ -228,7 +223,7 @@ header ul li a {
     margin: auto;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 5px 3px 10px rgba(0,0,0,.3);
+    box-shadow: 5px 3px 10px rgba(0, 0, 0, .3);
     position: absolute;
     bottom: -120px;
 }
@@ -253,6 +248,8 @@ header ul li a {
     border: none;
     border-radius: 25px;
     margin-right: 20px;
+    outline: none;
+    position: relative;
 }
 
 .access-form form button {
@@ -264,7 +261,18 @@ header ul li a {
     font-weight: 700;
 }
 
+.access-form .alert {
+    color: var(--Light-Red);
+    width: 70%;
+    margin: auto;
+    padding-top: 10px;
+    text-align: start;
+    display: none;
+}
 
+.access-form .alert:active {
+    display: block;
+}
 
 /* FOOTER */
 
@@ -293,7 +301,6 @@ footer .list-column-location {
 
 footer .list-column-location li {
     margin-right: 20px;
-    
 }
 
 footer .list-column-one {
@@ -318,7 +325,7 @@ footer .list-column-contacts {
     width: 15%;
 }
 
-footer .list-column-contacts li{
+footer .list-column-contacts li {
     padding-bottom: 15px;
 }
 
@@ -326,18 +333,47 @@ footer .social-media {
     display: flex;
 }
 
-footer .social-media li  {
+footer .social-media li {
     width: 25px;
     height: 25px;
     margin: 10px;
     list-style-type: none;
+    border-radius: 50%;
+    border: 1px solid var(--White);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    
 }
 
+footer .social-media .active-face {
+    background-image: url('/images/facebook-f-brands-green.svg');
+    background-size: 40%;
+}
 
+footer .social-media .active-twitter {
+    background-image: url('/images/twitter-brands-green.svg');
+    background-size: 60%;
+}
+
+footer .social-media .active-instagram {
+    background-image: url('/images/instagram-brands-green.svg');
+    background-size: 50%;
+}
 
 footer .social-media li img {
     width: 100%;
     height: 100%;
+}
+
+footer .social-media li:hover {
+    cursor: pointer;
+}
+
+footer .social-media li img:hover {
+    opacity: 0;
 }
 
 @media (max-width: 1110px) {
@@ -345,19 +381,137 @@ footer .social-media li img {
         flex-direction: column;
         align-items: center;
     }
-
     .productive div {
         width: auto;
         height: 200px;
         align-items: center;
     }
-
     .productive div h1 {
         padding: 0;
+        font-size: 18px;
     }
-
     .profiles .box {
         margin: auto;
+    }
+}
 
+@media(max-width: 975px) {
+    .profiles {
+        margin-bottom: 350px;
+    }
+    .access-form {
+        padding: 30px 8px;
+        width: 90%;
+        height: 400px;
+    }
+    .access-form p {
+        padding: 0;
+        width: 90%;
+        margin: auto;
+    }
+    .access-form form {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .access-form form input {
+        width: 100%;
+        padding: 15px 25px;
+        border: none;
+        border-radius: 25px;
+        margin-right: 20px;
+    }
+    .access-form form button {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media(max-width: 930px) {
+    .files .discreption-file {
+        width: 100%;
+    }
+    .files .discreption-file p {
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 700px) {
+    header picture img {
+        width: 100px;
+    }
+    header picture ul {
+        width: auto;
+    }
+    header ul li {
+        padding: 0;
+        margin: 10px;
+        font-size: 14px;
+    }
+    .files>img {
+        width: 90%;
+    }
+    .files .discreption-file h1 {
+        font-size: 20px;
+    }
+    .productive picture {
+        width: auto;
+        text-align: center;
+    }
+    .productive picture img {
+        width: 90%;
+    }
+    .productive div {
+        align-items: flex-start;
+    }
+    .profiles {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .profiles .box {
+        width: 300px;
+    }
+    .profiles .quotes::after {
+        left: 20px;
+        top: -45px;
+    }
+    .access-form {
+        height: 370px;
+    }
+    .access-form h1 {
+        font-size: 20px;
+    }
+    .access-form .alert {
+        width: 90%;
+    }
+    footer .contact-list ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: left;
+    }
+    footer .list-column-contacts {
+        width: auto;
+    }
+    footer .list-column-contacts li {
+        padding-right: 0;
+    }
+    footer .list-column-location {
+        width: 90%;
+    }
+    footer .list-column-one {
+        width: 90%;
+        align-items: flex-start;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 20px 0;
+    }
+    footer .social-media {
+        justify-content: center;
+        width: 100%;
     }
 }

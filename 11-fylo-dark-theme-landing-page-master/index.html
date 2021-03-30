@@ -141,9 +141,11 @@
       <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any
         questions, our support team would be happy to help you.</p>
       <form>
-        <input type="text" placeholder="email@example.com">
+        <input type="email" placeholder="email@example.com" required>
         <button>Get Started For Free</button>
+        <div class="alert">Please, enter a valid email address </div>
       </form>
+      
     </div>
   </div>
   </main>
@@ -179,10 +181,11 @@
         </div>
 
         <div class="social-media">
-          <li><img src="/images/facebook-f-brands.svg" alt="facebook-icon"></li>
-          <li><img src="/images/twitter-brands.svg" alt="twitter-icon"></li>
-          <li><img src="/images/instagram-brands.svg" alt="instagram-icon"></li>
+          <li class="active-face"><img src="/images/facebook-f-brands.svg" alt="facebook-icon"></li>
+          <li class="active-twitter"><img src="/images/twitter-brands.svg" alt="twitter-icon"></li>
+          <li class="active-instagram"><img src="/images/instagram-brands.svg" alt="instagram-icon"></li>
         </div>
+        
       </ul>
     </div>
     <p class="attribution">
