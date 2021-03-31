@@ -25,7 +25,8 @@ body {
     /* ### Primary */
     
     --Dark-Blue-email: hsl(217, 28%, 15%); /* (intro and email sign up background) */
-    --Dark-Blue: hsl(218, 28%, 13%); /*  (main background) */
+    --Dark-Blue-clear: hsl(218, 28%, 13%); /*  (main background) */
+    --Dark-Blue: hsl(222, 26%, 15%); /*  (main background) */
     --Dark-Blue-footer: hsl(216, 53%, 9%); /*(footer background)*/
     --Dark-Blue-testimonials: hsl(219, 30%, 18%); /* (testimonials background)*/
     
