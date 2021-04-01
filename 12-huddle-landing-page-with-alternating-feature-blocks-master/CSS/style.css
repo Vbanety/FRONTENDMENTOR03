@@ -5,6 +5,13 @@ body {
     margin: auto;
 }
 
+h1,
+h2,
+h3 {
+    font-family: 'Poppins', 'sans-serif';
+    font-weight: 700;
+}
+
 .container {
     position: relative;
     padding: 50px;
@@ -61,6 +68,11 @@ span {
     text-decoration: none;
     color: initial;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+    font-weight: 700;
+}
+
+.header a:hover {
+    color: var(--Grayish-Blue);
 }
 
 .section-flex {
@@ -72,6 +84,10 @@ span {
 
 .bottom-sky {
     margin-bottom: 250px;
+}
+
+.bottom-sky div span {
+    color: #000;
 }
 
 .section-flex div {
@@ -98,6 +114,7 @@ span {
 }
 
 .section-flex div a, .get-started div a {
+    font-weight: 600;
     margin-right: auto;
     padding: 15px 60px;
     border-radius: 30px;
@@ -105,6 +122,10 @@ span {
     color: #fff;
     background-color: var(--Pink);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+}
+
+.section-flex div a:hover, .get-started div a:hover {
+    background-color: rgba(255, 82, 191, .8);
 }
 
 .section-flex picture img {
@@ -188,7 +209,8 @@ footer {
     grid-template-areas: "logo-footer . . . . ." "area . links . links-1 social";
     background-color: var(--Very-Dark-Cyan);
     color: #fff;
-    padding: 200px 50px 50px 50px;
+    padding: 200px 50px 80px 100px;
+    
     position: relative;
 }
 
@@ -208,6 +230,10 @@ footer {
     grid-area: links-1;
 }
 
+.links span a:hover, .links-1 span a:hover {
+    border-bottom: 1px solid #fff;
+}
+
 .social {
     grid-area: social;
 }
@@ -218,7 +244,7 @@ footer {
 }
 
 .location img {
-    height: 30px;
+    height: 20px;
     margin-right: 20px;
 }
 
@@ -232,7 +258,7 @@ footer {
 }
 
 .contacts img {
-    margin-right: 20px;
+    margin-right: 20px;   
 }
 
 .links, .links-1 {
@@ -242,13 +268,46 @@ footer {
     height: 100px;
 }
 
-.social span a img {
-    width: 25px;
-    height: 25px;
-    margin: 0 10px;
+.social span {
     border: 1px solid #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    align-items: center;
+    display: inline-flex;
+    flex-direction: row;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.social span a img {
+    width: 100%;
+    height: 25px;
+    align-items: center;
     padding: 5px;
     border-radius: 50%;
+    display: flex;
+}
+
+.social span a img:hover {
+    opacity: 0;
+}
+
+.icon-facebook-pink {
+    background-image: url('/images/facebook-f-brands-pink.svg');
+    background-size: 32%;
+}
+
+.icon-twitter-pink {
+    background-image: url('/images/twitter-brands-pink.svg');
+    background-size: 53%;
+}
+
+.icon-instagram-pink {
+    background-image: url('/images/instagram-brands-pink.svg');
+    background-size: 45%;
 }
 
 footer span {
@@ -257,43 +316,52 @@ footer span {
 
 footer .footer-float {
     position: absolute;
-    bottom: 0;
+    bottom: 30px;
     right: 50px;
-    margin: 0 20px;
 }
 
 @media(max-width: 920px) {
+    
     .container {
         position: unset;
     }
+
     .container::after {
-        background-image: url('/images/bg-hero-desktop\.svg');
+        background-image: url('/images/bg-hero-desktop.svg');
         height: 140%;
     }
+
     .container::before {
-        height: 160%;
+        height: 160%;       
     }
+
     .section-flex {
         flex-direction: column;
     }
+    
     .bottom-sky {
         margin-bottom: 130px;
     }
+
     .bottom-sky picture {
         margin-top: 40px;
     }
+
     .section-flex div {
         flex-direction: column;
         justify-content: space-around;
         width: 100%;
         text-align: center;
     }
+
     .section-flex a {
         margin: auto;
     }
+
     .section-flex picture {
         width: 100%;
     }
+
     .box-shadow {
         box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
         flex-direction: column;
@@ -302,35 +370,50 @@ footer .footer-float {
         padding: 40px;
         margin-bottom: 35px;
     }
+
     .box-shadow h2 {
         margin: auto;
     }
+
     .reverse-column {
         display: flex;
         flex-direction: column-reverse;
     }
+
     .get-started div {
         width: 100%;
     }
+
     footer {
         grid-template-columns: 1fr;
         grid-template-rows: 100px 230px 120px 150px 50px;
         column-gap: 20px;
-        grid-template-areas: "logo-footer" "area" "links" "links-1" "social";
+        grid-template-areas: 
+        "logo-footer" 
+        "area"
+        "links"
+        "links-1"
+        "social"
+        ;
         padding: 180px 30px 30px 30px;
         position: unset;
     }
+
     footer .social {
         align-items: center;
         justify-self: center;
     }
+
     footer .footer-float {
         position: relative;
-        margin: auto;
-        display: flex;
+        bottom: 0px;
+        left: auto;
+        right: auto;
+        display: flex;       
         align-items: center;
         justify-content: center;
     }
+
     footer .footer-float span {
         text-align: center;
         margin: auto;
@@ -338,24 +421,28 @@ footer .footer-float {
 }
 
 @media(max-width: 830px) {
-    .container::after {
+    .container::after {    
         height: 120%;
     }
+
     .container::before {
-        height: 145%;
+        height: 145%;       
     }
 }
 
 @media(max-width: 600px) {
-    .container::after {
+    .container::after {    
         height: 105%;
     }
+
     .container::before {
-        height: 130%;
+        height: 130%;       
     }
+
     .header img {
         width: 100px;
     }
+
     .header a {
         width: auto;
         padding: 10px 30px;
@@ -363,38 +450,46 @@ footer .footer-float {
 }
 
 @media(max-width: 375px) {
-    .container {
+    .container {    
         padding: 20px;
         margin: 0;
     }
+
     .section-flex {
         margin-bottom: 80px;
     }
+
     .box-shadow {
-        width: 100%;
+        width: 95%;
         height: auto;
         padding: 30px;
     }
+
     .get-started div {
         width: 100%;
         height: 200px;
         padding: 0;
-        top: -100px;
+        top: -100px;       
     }
+
     .get-started div h3 {
         font-size: 18px;
     }
+
     .get-started div a {
         width: 70%;
         font-size: 15px;
     }
+
     .container::after {
         background-image: url('/images/bg-hero-mobile.svg');
         height: 100%;
     }
+
     .container::before {
-        height: 115%;
+        height: 115%;       
     }
+
     footer {
         padding-top: 180px;
     }
