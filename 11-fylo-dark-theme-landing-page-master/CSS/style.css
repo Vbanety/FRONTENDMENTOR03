@@ -519,6 +519,11 @@ footer .social-media span img:hover {
     .access-form .alert {
         width: 90%;
     }
+
+    footer .intro-location {
+        margin-bottom: 30px;
+    }
+
     footer .footer-bottom {
         display: flex;
         flex-direction: column;

@@ -1,0 +1,401 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: auto;
+}
+
+.container {
+    position: relative;
+    padding: 50px;
+}
+
+.container::after {
+    content: '';
+    background-image: url('/images/bg-hero-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    position: absolute;
+    width: 100%;
+    height: 36%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.container::before {
+    content: '';
+    background: hsl(191, 89%, 96%);
+    background-position: center;
+    background-size: 100%;
+    position: absolute;
+    width: 100%;
+    height: 32%;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+span {
+    font-size: 15px;
+    color: var(--Grayish-Blue);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.header img {
+    width: 200px;
+}
+
+.header a {
+    background-color: #fff;
+    padding: 15px 60px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: initial;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+}
+
+.section-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.bottom-sky {
+    margin-bottom: 250px;
+}
+
+.section-flex div {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.section-flex div h1 {
+    font-size: 38px;
+}
+
+.section-flex div span {
+    margin: 20px 0;
+}
+
+.section-flex div {
+    width: 40%;
+}
+
+.section-flex picture {
+    width: 55%;
+}
+
+.section-flex div a, .get-started div a {
+    margin-right: auto;
+    padding: 15px 60px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--Pink);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+}
+
+.section-flex picture img {
+    width: 100%;
+}
+
+.box-shadow {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+    border-radius: 20px;
+    padding-left: 150px;
+    padding-right: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.box-shadow div {
+    width: 45%;
+}
+
+.box-shadow picture {
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+.box-shadow picture img {
+    width: 100%;
+}
+
+.get-started {
+    margin-top: 250px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.get-started div {
+    width: 64%;
+    height: 280px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 50px 0;
+    position: absolute;
+    top: -115px;
+    background-color: #fff;
+}
+
+.get-started div h3 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.get-started div a {
+    margin: 0;
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: 600;
+    width: 50%;
+    border-radius: 35px;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 32% auto 10% auto 20% 20%;
+    grid-template-rows: 100px 1fr;
+    column-gap: 20px;
+    grid-template-areas: "logo-footer . . . . ." "area . links . links-1 social";
+    background-color: var(--Very-Dark-Cyan);
+    color: #fff;
+    padding: 200px 50px 50px 50px;
+    position: relative;
+}
+
+.logo-footer {
+    grid-area: logo-footer;
+}
+
+.area {
+    grid-area: area;
+}
+
+.links {
+    grid-area: links;
+}
+
+.links-1 {
+    grid-area: links-1;
+}
+
+.social {
+    grid-area: social;
+}
+
+.location {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.location img {
+    height: 30px;
+    margin-right: 20px;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts span {
+    margin-bottom: 20px;
+}
+
+.contacts img {
+    margin-right: 20px;
+}
+
+.links, .links-1 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100px;
+}
+
+.social span a img {
+    width: 25px;
+    height: 25px;
+    margin: 0 10px;
+    border: 1px solid #fff;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+footer span {
+    color: #fff;
+}
+
+footer .footer-float {
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+    margin: 0 20px;
+}
+
+@media(max-width: 920px) {
+    .container {
+        position: unset;
+    }
+    .container::after {
+        background-image: url('/images/bg-hero-desktop\.svg');
+        height: 140%;
+    }
+    .container::before {
+        height: 160%;
+    }
+    .section-flex {
+        flex-direction: column;
+    }
+    .bottom-sky {
+        margin-bottom: 130px;
+    }
+    .bottom-sky picture {
+        margin-top: 40px;
+    }
+    .section-flex div {
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        text-align: center;
+    }
+    .section-flex a {
+        margin: auto;
+    }
+    .section-flex picture {
+        width: 100%;
+    }
+    .box-shadow {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px;
+        margin-bottom: 35px;
+    }
+    .box-shadow h2 {
+        margin: auto;
+    }
+    .reverse-column {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .get-started div {
+        width: 100%;
+    }
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 230px 120px 150px 50px;
+        column-gap: 20px;
+        grid-template-areas: "logo-footer" "area" "links" "links-1" "social";
+        padding: 180px 30px 30px 30px;
+        position: unset;
+    }
+    footer .social {
+        align-items: center;
+        justify-self: center;
+    }
+    footer .footer-float {
+        position: relative;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    footer .footer-float span {
+        text-align: center;
+        margin: auto;
+    }
+}
+
+@media(max-width: 830px) {
+    .container::after {
+        height: 120%;
+    }
+    .container::before {
+        height: 145%;
+    }
+}
+
+@media(max-width: 600px) {
+    .container::after {
+        height: 105%;
+    }
+    .container::before {
+        height: 130%;
+    }
+    .header img {
+        width: 100px;
+    }
+    .header a {
+        width: auto;
+        padding: 10px 30px;
+    }
+}
+
+@media(max-width: 375px) {
+    .container {
+        padding: 20px;
+        margin: 0;
+    }
+    .section-flex {
+        margin-bottom: 80px;
+    }
+    .box-shadow {
+        width: 100%;
+        height: auto;
+        padding: 30px;
+    }
+    .get-started div {
+        width: 100%;
+        height: 200px;
+        padding: 0;
+        top: -100px;
+    }
+    .get-started div h3 {
+        font-size: 18px;
+    }
+    .get-started div a {
+        width: 70%;
+        font-size: 15px;
+    }
+    .container::after {
+        background-image: url('/images/bg-hero-mobile.svg');
+        height: 100%;
+    }
+    .container::before {
+        height: 115%;
+    }
+    footer {
+        padding-top: 180px;
+    }
+}
