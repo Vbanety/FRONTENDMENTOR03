@@ -1,0 +1,478 @@
+h1,
+h2,
+h3 {
+    font-family: 'Poppins', 'sans-serif';
+}
+.header {
+    display: flex;
+    justify-content: space-between;   
+}
+
+.header, .section {
+    padding: 50px ;
+}
+
+.header a {
+    padding: 10px 30px;
+    border: 1px solid var(--Light-Pink);
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px rgba(255, 143, 216,.8);
+    color: var(--Light-Pink);
+    text-decoration: none;
+}
+
+.section, .box-ready {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.section h1, .box-ready h3 {
+    margin-top: 130px;
+    font-size: 48px;
+}
+
+.section p {
+    width: 55%;
+    padding: 45px 70px;
+    font-size: 18px;
+}
+
+.section a, .box-ready a {
+    width: 50%;
+    padding: 27px 0;
+    border-radius: 45px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0,.2);
+    background-color: var(--Pink);
+    color: var(--Very-Pale-Blue);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.image-mockups {
+    margin: 110px 0;
+    width: 100%;
+}
+
+.section .numbers  {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 95%;
+}
+
+.section .numbers div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 215px;
+}
+
+.section .numbers div bold {
+    font-size: 100px;
+    font-weight: 700;
+}
+
+.section .numbers div span {
+    color: rgba(0, 0, 0, .5);
+}
+
+.section-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-flex {
+    display: flex;
+    padding: 50px 100px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 200px 0;
+}
+
+.card-flex img {
+    width: 45%;
+}
+
+.card-reverse {
+    flex-direction: row-reverse;
+    background-color: var(--Very-back-blue);
+}
+
+.card-text {
+    width: 45%;
+}
+
+.card-text h2 {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.bg-sky-one, .bg-sky-two {
+    position: relative;
+}
+
+.bg-sky-one::after,
+ .bg-sky-one::before,
+ .bg-sky-two::after,
+ .bg-sky-two::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 160px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    left: 0px;
+}
+
+.bg-sky-one::after {
+    background-image: url('/images/bg-section-top-desktop-1.svg');
+    top: -110px;
+}
+
+.bg-sky-one::before {
+    background-image: url('/images/bg-section-bottom-desktop-1.svg');
+    bottom: -110px;
+}
+
+.bg-sky-two::after {
+    background-image: url('/images/bg-section-top-desktop-2.svg');
+    top: -110px;
+}
+
+.bg-sky-two::before {
+    background-image: url('/images/bg-section-bottom-desktop-2.svg');
+    bottom: -110px;
+}
+
+.box-ready a {
+    margin-top: 30px;
+    margin-bottom: 250px;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--Very-Dark-Cyan);
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px;
+    padding: 100px;
+    font-family: 'Poppins', 'sans-serif';
+    position: relative;
+    align-self: center;
+    justify-self: center;
+}
+
+footer::after {
+    content: '';
+    position: absolute;
+    background-image: url('/images/bg-footer-top-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 100%;
+    height:30%;
+    top: -140px;
+    left: 0;
+    display: flex;
+}
+
+.footer-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 200px;
+}
+
+.footer-flex h3{
+    text-transform: uppercase;   
+}
+
+.footer-flex p {
+    margin: 30px 0;
+    width: 60%;
+}
+
+footer ul li  {
+    list-style-type: none;
+    display: flex;   
+}
+
+.contacts {
+    margin-bottom: 50px;
+}
+
+.contacts ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 60px;
+    
+}
+
+.contacts ul li {
+    align-items: center;
+}
+
+.contacts ul li img {
+    margin-right: 20px;
+    width: 20px;
+}
+
+.social ul {
+    display: flex;
+}
+
+.social ul li {
+    width: 25px;
+    margin-right: 30px;
+}
+
+.social ul li img {
+    width: 100%;
+}
+
+footer form input {
+    padding: 15px 10px;
+    border-radius: 10px;
+    border: none;
+    margin-right: 20px;
+    outline: none;
+}
+
+footer form input[type=email] {
+    width: 320px;
+}
+
+footer form input[type=submit] {
+    width: 160px;
+    background-color: var(--Pink);
+    color: var(--Very-back-blue);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media (max-width: 1185px) {
+    .section p {
+        width: auto;
+    }
+
+    footer::after{
+        top: -132px;
+    }
+
+    footer form input {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 995px) {
+    footer::after{
+        top: -124px;
+    }
+}
+
+@media (max-width: 886px) {
+    footer::after{
+        top: -116px;
+    }
+}
+@media (max-width: 738px) {
+
+    .card-flex {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin-bottom: 50px;
+    }
+
+    .card-flex .card-text  {
+        width: 90%;
+        text-align: center;
+    }
+
+    .card-flex img {
+        margin-bottom: 80px;
+    }
+
+    
+
+    .section .numbers {
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+    }
+
+    .section .numbers .number-bottom {
+        margin-bottom: 150px;
+    }
+
+    .section .numbers div span {
+        font-size: 25px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .footer-flex {
+        height: auto;
+    }
+
+    .footer-flex p {
+        width: auto;
+    }
+
+    .footer-bottom-mobile {
+        margin-bottom: 100px;
+    }
+
+    footer::after{
+        top: -172px;
+    }
+
+    footer form {
+        margin-bottom: 50px;
+        width: 100%;
+    }
+
+    footer form input {
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+    footer form input[type="email"] {
+        width: 100%;
+    }
+
+    footer form input[type="submit"] {
+        display: flex;
+        justify-content: center;
+        text-align: center !important;
+    }
+
+    
+
+}
+
+@media(max-width: 600px) {
+ 
+    .header, .section {
+        padding: 30px;
+    }
+
+    .header {
+        height: 80px;
+        margin-bottom: 30px;
+        align-items: center;
+    }
+
+    .header a {
+        width: 120px;
+        height: 30px;
+        padding: 10px;
+        width: 100px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+    }
+
+    .section p {
+        padding: 45px 0;
+    }
+
+    .header img {
+        width: 120px;
+    }
+
+    .section h1, .box-ready h3 {
+        margin-top: 60px;
+        font-size: 28px;
+    }
+
+    .section a, .box-ready a {
+        width: 75%;
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    .section .numbers {
+        width: 70%;
+    }
+
+    .section .numbers div bold {
+        font-size: 68px;
+    }
+
+    .section .numbers div span {
+        font-size: 20px;
+    
+        margin: auto;
+    }
+
+    .card-flex {
+        margin: 50px 0;
+    }
+
+    .card-flex img {
+        width: 80%;
+        margin-top: 50px;
+    }
+
+    .card-flex p {
+        margin-bottom: 50px;
+    }
+
+    .bg-sky::after, .bg-sky-two::after {
+        top: -100px;       
+    }
+    
+    .bg-sky::before, .bg-sky-two::before {
+        bottom: -100px;       
+    }
+
+    .bg-sky-one::after {
+        background-image: url('/images/bg-section-top-mobile-1.svg');
+        top: -135px;
+    }
+    
+    .bg-sky-one::before {
+        background-image: url('/images/bg-section-bottom-mobile-1.svg');
+        bottom: -105px;
+    }
+    
+    .bg-sky-two::after {
+        background-image: url('/images/bg-section-top-mobile-2.svg');
+        top: -132px;
+    }
+    
+    .bg-sky-two::before {
+        background-image: url('/images/bg-section-bottom-mobile-2.svg');
+        bottom: -110px;
+    }
+    footer::after {
+        background-image: url('/images/bg-footer-top-mobile.svg');
+        top: -135px;
+    }
+
+    footer {
+        padding: 50px 30px;
+    }
+
+    .footer-flex {
+        margin: auto;
+    }
+}
