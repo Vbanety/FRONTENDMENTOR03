@@ -254,6 +254,12 @@ footer ul li  {
     width: 100%;
 }
 
+footer form {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
 footer form input {
     padding: 15px 10px;
     border-radius: 10px;
@@ -262,7 +268,19 @@ footer form input {
     outline: none;
 }
 
-footer form input[type=email] {
+footer form label {
+    padding: 15px 10px;
+    border-radius: 10px;
+    border: none;
+    margin-right: 20px;
+    margin-bottom: 0;
+    outline: none;
+    width: 300px;
+    height: 50px;
+    background: #fff;
+}
+
+footer form input {
     width: 320px;
 }
 
@@ -283,7 +301,7 @@ footer form input[type=submit] {
         top: -132px;
     }
 
-    footer form input {
+    footer form label {
         margin-bottom: 20px;
     }
 }
@@ -382,8 +400,9 @@ footer form input[type=submit] {
         margin-left: auto;
     }
 
-    footer form input[type="email"] {
+    footer form label {
         width: 100%;
+        margin-right: 0;
     }
 
     footer form input[type="submit"] {
@@ -456,7 +475,6 @@ footer form input[type=submit] {
 
     .section .numbers div .number {
         font-size: 68px;
-        color: #000 !important;
     }
 
     .section .numbers div span {
