@@ -51,6 +51,7 @@ section:first-child button {
 
 .middle-section button {
     color: var(--Dark-cyan);
+    outline: none;
 }
 
 section:last-child {
