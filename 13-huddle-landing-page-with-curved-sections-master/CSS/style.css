@@ -78,7 +78,7 @@ h3 {
     height: 215px;
 }
 
-.section .numbers div bold {
+.section .numbers div .number {
     font-size: 100px;
     font-weight: 700;
 }
@@ -454,8 +454,9 @@ footer form input[type=submit] {
         margin-bottom: 100px;
     }
 
-    .section .numbers div bold {
+    .section .numbers div .number {
         font-size: 68px;
+        color: #000 !important;
     }
 
     .section .numbers div span {
