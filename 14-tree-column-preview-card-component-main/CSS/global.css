@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::after, ::before {
+    box-sizing: inherit;
+}
+
+:root {
+/* ### Primary */
+
+--Bright-orange: hsl(31, 77%, 52%);
+--Dark-cyan: hsl(184, 100%, 22%);
+--Very-dark-cyan: hsl(179, 100%, 13%);
+
+/* ### Neutral */
+
+--Transparent: hsla(0, 0%, 100%, 0.75); /*  white (paragraphs) */
+--Very-light-gray: hsl(0, 0%, 95%); /* (background, headings, buttons) */
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+

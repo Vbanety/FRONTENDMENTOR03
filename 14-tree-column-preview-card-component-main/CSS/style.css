@@ -1,0 +1,121 @@
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: 100vh;
+    width: 62%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+section {
+    padding: 40px;
+    color: var(--Very-light-gray);
+}
+
+section h1 {
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', 'sans-serif';
+    font-weight: 700;
+    font-size: 38px;
+    margin-top: 28px;
+}
+
+section:first-child {
+    border-radius: 10px 0 0 10px;
+    background-color: var(--Bright-orange);
+}
+
+section:first-child button:hover,
+.middle-section button:hover,
+section:last-child button:hover{
+    cursor: pointer;
+    border: 1px solid #fff;
+    background-color: rgba(0,0,0,.0);
+    color: #fff;
+    padding: 14px 20px;
+}
+
+section:first-child button {
+    color: var(--Bright-orange);
+}
+
+.middle-section {
+    background-color: var(--Dark-cyan);
+}
+
+.middle-section button {
+    color: var(--Dark-cyan);
+}
+
+section:last-child {
+    border-radius: 0 10px 10px 0;
+    background-color: var(--Very-dark-cyan);
+}
+
+section:last-child button {
+    color: var(--Very-dark-cyan);
+}
+
+section p {
+    margin-top: 30px;
+    margin-bottom: 80px;
+    font-family: 'Lexend Deca', 'sans-serif';
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--Transparent);
+}
+
+section button {
+    border: none;
+    border-radius: 25px;
+    padding: 15px 20px;
+    width: 130px;
+    font-family: 'Lexend Deca', 'sans-serif';
+    font-weight: 700;
+}
+
+@media(max-width: 1100px) {
+
+    .container {
+        flex-direction: column;
+        height: auto;
+        margin: auto;
+        width: 90%;
+    }
+
+    section {
+        width: 80%;
+    }
+
+    section:first-child {
+        border-radius: 10px 10px 0 0;
+        margin-top: 50px;
+    }
+
+    section:last-child {
+        border-radius: 0 0 10px 10px ;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        width: auto;
+    }
+}
+
+@media(max-width: 400px) {
+    section:first-child {
+        margin-top: 100px;
+    }
+
+    section:last-child {
+        margin-bottom: 100px;
+    }
+}
