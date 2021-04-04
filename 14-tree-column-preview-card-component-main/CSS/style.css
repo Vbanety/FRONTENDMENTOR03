@@ -108,6 +108,11 @@ section button {
     section {
         width: auto;
     }
+
+    section p {
+        margin-bottom: 30px;
+    }
+    
 }
 
 @media(max-width: 400px) {
