@@ -51,7 +51,6 @@ section:first-child button {
 
 .middle-section button {
     color: var(--Dark-cyan);
-    outline: none;
 }
 
 section:last-child {
@@ -79,6 +78,7 @@ section button {
     width: 130px;
     font-family: 'Lexend Deca', 'sans-serif';
     font-weight: 700;
+    outline: none;
 }
 
 @media(max-width: 1100px) {
