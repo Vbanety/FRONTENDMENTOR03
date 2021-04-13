@@ -2,72 +2,84 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="/CSS/global.css">
-  <link rel="stylesheet" href="/CSS/style.css">
-
-  <title>Frontend Mentor | FAQ Accordion Card</title>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/global.css">
+    <title>Document</title>
 </head>
-<script src="/JS/script.js"></script>
+
+<style>
+
+</style>
 
 <body>
-  <div class="background">
-    <div class="container">
-      <div class="woman-picture">
-      </div>
-      <div class="faq">
-        <h1>FAQ</h1>
-        <label id="bolder">How many team members can I invite?
-          <button onclick="divShow()">
-            <img id="turn-down" src="/images/icon-arrow-down.svg" alt="icon-arrow-down">
-          </button>
-        </label>
-        <p id="showText" class="noneDiv">You can invite up to 2 additional users on the Free plan. There is no limit on
-          team members for the Premium plan.</p>
-      
-        <label id="bolder2">What is the maximum file upload size?
-          <button onclick="divShow2()">
-            <img id="turn-down2" id="turn-down" src="/images/icon-arrow-down.svg" alt="icon-arrow-down">
-          </button>
-        </label>
-        <p id="showText2" class="noneDiv">No more than 2GB. All files in your account must fit your allotted storage
-          space.</p>
-      
-        <label id="bolder3">How do I reset my password?
-          <button onclick="divShow3()">
-            <img id="turn-down3" id="turn-down" src="/images/icon-arrow-down.svg" alt="icon-arrow-down">
-          </button>
-        </label>
-        <p id="showText3" class="noneDiv">Click “Forgot password” from the login page or “Change password” from your profile page.
-          A reset link will be emailed to you.</p>
-      
-        <label id="bolder3">Can I cancel my subscription?
-          <button onclick="divShow4()">
-            <img id="turn-down4" id="turn-down" src="/images/icon-arrow-down.svg" alt="icon-arrow-down">
-          </button>
-        </label>
-        <p id="showText4" class="noneDiv">Yes! Send us a message and we’ll process your request no questions asked.</p>
-      
-        <label id="bolder4">Do you provide additional support?
-          <button onclick="divShow5()">
-            <img id="turn-down5" id="turn-down" src="/images/icon-arrow-down.svg" alt="icon-arrow-down">
-          </button>
-        </label id="bolder5">
-        <p id="showText5" class="noneDiv">Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
-      </div>
-  </div>
-  </div>
+    <div class="background">
+        <div class="container">
+            <div class="woman-picture">
+                <img src="/images/illustration-woman-online-mobile.svg" alt="">
+            </div>
 
+            <div class="accordion_wrapper">
+                <div class="accordionItem open">
+                    <h1>Faq</h1>
+                    <span class="accordionQuestion">How many team members can I invite?<a id="turn-down"  class="arrowUp open"><img
+                        src="/images/icon-arrow-down.svg" alt="icon-arrow-down"></a></span>
+                    <div class="accordionItemContent">
+                        <p>You can invite up to 2 additional users on the Free plan. There is no limit on
+                            team members for the Premium plan.</p>
+                    </div>
+                </div>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor</a>.
-    Coded by <a href="https://frontendmentor.io/profile/vbanety" target="_blank"> Vinicius Batista</a>.
-  </div>
+                <div class="accordionItem close ">
+                    <span class="accordionQuestion">What is the maximum file upload size?<a id="turn-down" class="arrowUp close"><img
+                        src="/images/icon-arrow-down.svg" alt="icon-arrow-down"></a></span>
+                    <div class="accordionItemContent">
+                        <p>No more than 2GB. All files in your account must fit your allotted storage
+                            space.</p>
+                    </div>
+                </div>
+
+                <div class="accordionItem close">
+                    <span class="accordionQuestion">How do I reset my password?<a id="turn-down" class="arrowUp close"><img
+                        src="/images/icon-arrow-down.svg" alt="icon-arrow-down"></a></span>
+                    <div class="accordionItemContent">
+                        <p>Click “Forgot password” from the login page or “Change password” from your profile page.
+                            A reset link will be emailed to you.</p>
+                    </div>
+                </div>
+
+                <div class="accordionItem close">
+                    <span class="accordionQuestion">Can I cancel my subscription?<a id="turn-down" class="arrowUp close"><img 
+                        src="/images/icon-arrow-down.svg" alt="icon-arrow-down"></a></span>
+                    <div class="accordionItemContent">
+                        <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
+                    </div>
+                </div>
+
+                <div class="accordionItem close">
+                    <span class="accordionQuestion">Do you provide additional support?<a id="turn-down" class="arrowUp close"><img 
+                        src="/images/icon-arrow-down.svg" alt="icon-arrow-down"></a></span>
+                    <div class="accordionItemContent">
+                        <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    
+    <div class="attribution">
+        Challenge by  <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor  </a>
+        Coded by <a href="https://frontendmentor.io/profile/vbanety" target="_blank"> Vinicius Batista</a>
+    </div>
+
 </body>
+
+<script src="/JS/script.js">
+</script>
 
 </html>
