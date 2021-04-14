@@ -1,0 +1,123 @@
+body {
+    margin: auto;
+    padding: 50px 25px;
+    background-color: var(--Light-Grayish-Blue);
+    font-family: 'manrope', 'sans-serif';
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 100vh;
+    border-radius: 25px;
+}
+
+.container .drawers  {
+    border-radius: 15px 15px 0 0;
+    height: 200px;
+}
+
+.container .info {
+    padding: 40px 30px;
+    background-color: #fff;
+    border-radius: 0px 0px 15px 15px;
+    position: relative;
+}
+
+.container .info span {
+    color: var(--VeryDarkGrayishBlue);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.container .info p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: var(--Desaturated-Dark-Blue);
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    
+}
+
+.avatar img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.avatar h4 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+
+}
+
+.avatar h4 span {
+    color: var(--Grayish-Blue) !important;
+    font-weight: 400 !important;
+}
+
+.avatar .btn-share {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .07);
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.avatar .btn-share:hover {
+    cursor: pointer;
+}
+
+.share-active {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    background-color: var(--VeryDarkGrayishBlue);
+    width: 100%;
+    margin: 0;
+    padding: 20px 35px ;
+    height: auto;
+    border-radius: 0 0 15px 15px;
+}
+
+.share-active span {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--Grayish-Blue) !important;
+    font-weight: normal;
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.share-active ul {
+    display: flex;
+    margin-right: 20px;
+    width: 5%;
+}
+
+.share-active ul li {
+    list-style-type: none;
+    /* margin: 0 2px; */
+}
+
+.share-active ul li img{
+    width: 20px;
+    height: 20px;
+}
+
+.share-active img {
+    margin-right: 0;
+    margin-left: auto;
+}
