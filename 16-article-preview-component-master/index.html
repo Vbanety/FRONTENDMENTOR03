@@ -11,15 +11,11 @@
   <link rel="stylesheet" href="/CSS/style.css">
   <title>Frontend Mentor | Article preview component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-
-  </style>
 </head>
 
 <body>
   <div class="container">
-    <img class="drawers" src="/images/drawers.jpg" alt="drawers-picture">
+    <div class="drawers"></div>
     <div class="info">
       <span>Shift the overall look and feel by adding these wonderful
         touches to furniture in your home</span>
@@ -29,12 +25,12 @@
       <div class="avatar">
         <img src="/images/avatar-michelle.jpg" alt="avatar-michelle">
         <h4>Michelle Appleton<span>28 Jun 2020</span></h4>
-        <img class="btn-share" src="/images/icon-share.svg" alt="icon-share">
+        <button class="btn_open"><img class="btn-share" src="/images/icon-share.svg" alt="icon-share"></button>
       </div>
       <div class="share-active">
         <span>share</span>
         <ul>
-          <li><img src="/images/icon-facebook.svg" alt="icon-facebook"></li>
+          <li><a href=""><img src="/images/icon-facebook.svg" alt="icon-facebook"></a></li>
         </ul>
         <ul>
           <li><img src="/images/icon-twitter.svg" alt="icon-twitter"></li>
@@ -42,19 +38,17 @@
         <ul>
           <li><img src="/images/icon-pinterest.svg" alt="icon-pinterest"></li>
         </ul>
-        <img src="/images/icon-share.svg" alt="icon-share">
+        <button class="btn_close"><img class="btn-active" src="/images/icon-share-white.svg" alt="icon-share"></button>
       </div>
     </div>
 
   </div>
 
-
-  Share
-
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://www.frontendmentor.io/profile/vbanety" target="_blank">Vinicius</a>.
   </div>
+  <script src="/JS/script.js"></script>
 </body>
 
 </html>
