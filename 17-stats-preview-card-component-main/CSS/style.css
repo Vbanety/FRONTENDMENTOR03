@@ -81,6 +81,20 @@ p {
     border-radius: 0px 10px 10px 0px;
 }
 
+.attribution {
+    color:#fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
 @media (max-width: 1050px) {
     body {
         height: auto;
@@ -135,5 +149,11 @@ p {
     }
     .bg {
         border-radius: 10px 10px 0px 0px;
+    }
+
+    .attribution {
+        position: unset;
+        margin-top: 70px;
+        
     }
 }
