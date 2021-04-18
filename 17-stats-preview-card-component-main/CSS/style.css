@@ -12,7 +12,7 @@ body {
 .container {
     color: #fff;
     width: 81.2%;
-    height: 67%;
+    height: auto;
     display: flex;
     flex-direction: row;
     border-radius: 10px;
@@ -36,7 +36,8 @@ p {
     font-size: 14px;
     line-height: 1.8;
     color: var(--SlightlyTransparentWhite);
-    margin-top: -50px;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 .data {
@@ -78,12 +79,6 @@ p {
     background-color: rgba(73, 23, 105, .7);
     opacity: .9;
     border-radius: 0px 10px 10px 0px;
-}
-
-@media (max-width: 1150px) {
-    p {
-        margin-top: 0px;
-    }
 }
 
 @media (max-width: 1050px) {
