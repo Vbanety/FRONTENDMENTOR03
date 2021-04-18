@@ -2,17 +2,18 @@ body {
     display: flex;
     flex-direction: column;
     margin: auto;
-    padding: 50px 25px;
     background-color: var(--Light-Grayish-Blue);
     font-family: 'manrope', 'sans-serif';
     height: 100vh;
 }
+
 .container {
     display: flex;
     flex-direction: column;
     margin: auto;
-    
+    width: 90% !important;
     border-radius: 25px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, .2);
 }
 
 .container .drawers  {
@@ -20,14 +21,12 @@ body {
     height: 200px;
     background-image: url(/images/drawers.jpg);
     background-repeat: no-repeat;
-    background-size: 120% 120%;
-    background-position: center;
+    background-size: 100% 120%;
+    background-position: top;
 }
 
-
-
 .container .info {
-    padding: 40px 30px;
+    padding: 40px 30px 30px 30px;
     background-color: #fff;
     border-radius: 0px 0px 15px 15px;
     position: relative;
@@ -41,7 +40,7 @@ body {
 
 .container .info p {
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     line-height: 1.5;
     color: var(--Desaturated-Dark-Blue);
 }
@@ -49,7 +48,6 @@ body {
 .avatar {
     display: flex;
     align-items: center;
-    
 }
 
 .avatar .btn_open {
@@ -57,6 +55,7 @@ body {
     border: none;
     margin-left: auto;
     margin-right: 0;
+    outline: none;
 }
 
 .share-active .btn_close {
@@ -66,28 +65,25 @@ body {
     margin-right: 0;
 }
 
-.share-active .btn:hover {
-    cursor: pointer;
-}
-
 .avatar img {
     width: 40px;
     border-radius: 50%;
 }
 
-.avatar h4 {
+.avatar h1 {
     display: flex;
     flex-direction: column;
     margin-left: 20px;
-
+    font-size: 16px;
 }
 
-.avatar h4 span {
+.date {
     color: var(--Grayish-Blue) !important;
     font-weight: 400 !important;
+    font-size: 13px !important;
 }
 
-.avatar .btn-share {
+.avatar .icon-share {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -96,10 +92,14 @@ body {
     height: 32px;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, .07);
-    
+    background-image: url('/images/icon-share.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: var(--Desaturated-Dark-Blue);
+    z-index: -1;
 }
 
-.avatar .btn-share:hover {
+.avatar .icon-share:hover {
     cursor: pointer;
 }
 
@@ -107,7 +107,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 0;
     position: absolute;
     left: 0;
     bottom: 0px;
@@ -115,7 +114,6 @@ body {
     width: 100%;
     margin: 0;
     padding: 22px 30px;
-    height: auto;
     border-radius: 0 0 15px 15px;
     visibility: hidden;
     opacity: 0;
@@ -126,8 +124,6 @@ body {
     visibility: visible;
     opacity: 1;
 }
-
-
 
 .share-active span {
     text-transform: uppercase;
@@ -164,21 +160,26 @@ body {
     height: 32px;
     border-radius: 50%;
     background-color: var(--Grayish-Blue);
+    outline: none;
 }
 
+.btn_close:hover {
+    cursor: pointer;
+}
 
-@media (min-width: 600px) {
+@media (min-width: 875px) {
+    
     body {
         padding: 0;
     }
+
     .container {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        width: 60%;
-        height: 40%;
+        width: 53.5% !important;
+        height: auto;
         margin: auto;
-        box-shadow: 5px 5px 30px rgba(0, 0, 0, .07);
     }   
 
     .container .drawers, .container .info {
@@ -188,16 +189,124 @@ body {
     .container .info {
         width: 60%;
         border-radius:  0 15px 15px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 32px 40px;
+        position: relative;
+    }
+
+    .container .info span {
+        font-size: 20px;
     }
 
     .drawers {
         border: none;
-        border-radius: 15px 0 0 15px;
-        background-image: url(/images/drawers.jpg);
+        border-radius: 15px 0 0 15px !important;
+        background-image: url('/images/drawers.jpg');
         background-repeat: no-repeat;
-        background-size: 100% 100%;
-        background-position: center center;
-        width: 40%;    
+        background-size: 125% 100% !important;
+        background-position: left !important;
+        width: 40% !important;    
         height: 100%;
     }
+
+    .avatar::after {
+        display: block;
+        visibility: visible;
+        position: absolute;
+        right: -50px;
+        top: 140px;
+        background-color: var(--VeryDarkGrayishBlue);
+        padding: 15px 30px;
+        border-radius: 10px;
+        width: 25%;
+        transform: skew(15deg, 15deg);
+    }
+
+    .info {
+        position: relative !important;
+    }
+
+    .share-active, .share_arrow {
+        background-color: var(--VeryDarkGrayishBlue);
+        opacity: 0;
+        transition: visibility 0s, opacity 0.6s;
+        visibility: hidden;
+        position: absolute;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
+    }
+
+    .share-active {
+        align-items: center;
+        justify-content: center;
+        right: -42px;
+        left: auto;
+        bottom: 95px;
+        width: 200px;
+        padding: 10px 20px;
+        border-radius: 10px; 
+    }
+
+    .share_arrow {
+        display: flex;  
+        position: absolute !important;
+        bottom: -17px;
+        left: calc(100% - 74%);
+        clip-path: polygon(60% 50%, 50% 100%, 40% 50%);
+        width: 50%;
+        height: 80%;
+    }
+    
+    .share-active span {
+        font-size: 13px !important;
+        font-weight: 400 !important;
+        text-align: center;
+        width: 50%;
+    }
+    
+    .share-active ul {
+        display: flex;
+        align-items: center ;
+        justify-content: center;
+        margin-right: 0px;
+        width: 20%;
+    }
+    
+    .share-active ul li {
+        list-style-type: none;
+    }
+    
+    .share-active ul li img{
+        width: 20px;
+        height: 20px;
+    }
+    
+    .share-active .btn-active {
+        display: none;
+        width: auto;
+    }
+    
+    .btn_close:hover {
+        cursor: pointer;
+    }   
+
+    .btn_float {
+        position: absolute;
+        margin-right: 0;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 40px;
+        padding: 8px;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: var(--VeryDarkGrayishBlue);
+        outline: none;
+        visibility: hidden;
+        z-index: 1;
+    }
+
 }
